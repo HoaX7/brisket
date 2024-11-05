@@ -1,0 +1,1 @@
+If cli doesnt work after building try setting the line endings for `dist/index.js` to LF instead of CRLF.
