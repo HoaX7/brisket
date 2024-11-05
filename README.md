@@ -13,11 +13,21 @@ Download the cli using npm
 ```bash
 # install globally
 npm i -g brisket-create-app
+# or
+npx brisket-create-app
+# install locally
+npm i brisket-create-app
 ```
 
 To create a new project
 ```bash
+# cd into your desired project directory
 brisket-create-app 
+
+# Choose your desired options
+√ What is your project called? ... my-app
+√ Do you want to install dependencies? ... No / Yes
+√ Do you want to initialize a git repository? » No / Yes
 ```
 
 # Support Frameworks
