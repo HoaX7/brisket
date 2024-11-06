@@ -11,7 +11,14 @@ const getDefaultPackageJson = (appName: string) => {
   return {
     name: appName,
     version: "0.1.0",
+    repository: {
+      type: "git",
+      url: "",
+    },
+    homepage: "",
     author: "",
+    license: "",
+    keywords: [],
     scripts: {
       test: 'echo "Error: no test specified" && exit 1',
     },
@@ -65,13 +72,13 @@ export async function installTemplate({
           return "README.md";
         }
         case "env.example": {
-            return ".env";
+          return ".env";
         }
         case "gitignore": {
-            return ".gitignore"
+          return ".gitignore";
         }
         case "dockerignore": {
-            return ".dockerignore"
+          return ".dockerignore";
         }
         default:
           return name;
@@ -85,7 +92,11 @@ export async function installTemplate({
     packageJson = JSON.parse(packageJson);
     packageJson.name = appName;
   } else {
-    console.warn(yellow("Missing package.json file from template. Dependencies may not be installed correctly."));
+    console.warn(
+      yellow(
+        "Missing package.json file from template. Dependencies may not be installed correctly."
+      )
+    );
     console.log();
     packageJson = getDefaultPackageJson(appName);
   }

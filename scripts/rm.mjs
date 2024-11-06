@@ -3,7 +3,7 @@ import { join } from 'path'
 
 const args = process.argv.slice(2)
 if (args.length === 0) {
-  throw new Error('rm.mjs: requires a least one parameter')
+  throw new Error('rm.mjs: requires atleast one parameter')
 }
 for (const arg of args) {
   const path = join(process.cwd(), arg)
