@@ -30,8 +30,10 @@ brisket-create-app
 √ Do you want to initialize a git repository? » No / Yes
 ```
 
-# Support Frameworks (WIP)
+# Support Frameworks
 - Fastify
+- Express (WIP)
+- NestJs (WIP)
 
 By default the cli creates a `fastify-ts` template.
 

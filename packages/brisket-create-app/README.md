@@ -32,6 +32,8 @@ brisket-create-app
 
 # Support Frameworks (WIP)
 - Fastify
+- Express (WIP)
+- NestJs (WIP)
 
 By default the cli creates a `fastify-ts` template.
 
