@@ -25,12 +25,12 @@ To create a new project
 brisket-create-app 
 
 # Choose your desired options
-√ What is your project called? ... my-app
-√ Do you want to install dependencies? ... No / Yes
+√ What is your project called? » my-app
+√ Do you want to install dependencies? » No / Yes
 √ Do you want to initialize a git repository? » No / Yes
 ```
 
-# Support Frameworks
+# Support Frameworks (WIP)
 - Fastify
 
 By default the cli creates a `fastify-ts` template.

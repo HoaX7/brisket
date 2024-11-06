@@ -57,8 +57,8 @@ export default async function createApp({
     root,
     packageManager,
     skipInstall,
-    isOnline
-  })
+    isOnline,
+  });
 
   if (disableGit) {
     console.log("Skipping git initialization.");
@@ -82,6 +82,7 @@ export default async function createApp({
   if (skipInstall) {
     console.log(cyan(`  ${packageManager} install`));
     console.log("    Install packages.");
+    console.log();
   }
   console.log(cyan(`  ${packageManager} ${useYarn ? "" : "run "}dev`));
   console.log("    Starts the development server.");
@@ -95,6 +96,10 @@ export default async function createApp({
   console.log("We suggest that you begin by typing:");
   console.log();
   console.log(cyan("  cd"), cdpath);
-  if (skipInstall) console.log(`  ${cyan(`${packageManager} install`)}`);
+  console.log();
+  if (skipInstall) {
+    console.log(`  ${cyan(`${packageManager} install`)}`);
+    console.log();
+  }
   console.log(`  ${cyan(`${packageManager} ${useYarn ? "" : "run "}dev`)}`);
 }

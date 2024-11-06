@@ -107,7 +107,7 @@ async function run() {
       initial: true,
       type: "toggle",
       active: "Yes",
-      inactive: "No"
+      inactive: "No",
     });
 
     opts.skipInstall = !res.skipInstall;
@@ -121,7 +121,7 @@ async function run() {
       initial: true,
       type: "toggle",
       active: "Yes",
-      inactive: "No"
+      inactive: "No",
     });
 
     opts.disableGit = !res.disableGit;
@@ -178,46 +178,46 @@ async function run() {
   }
 }
 
-const update = updateCheck(packageJson).catch(() => null)
+const update = updateCheck(packageJson).catch(() => null);
 
 async function notifyUpdate(): Promise<void> {
   try {
     if ((await update)?.latest) {
       const global = {
-        npm: 'npm i -g',
-        yarn: 'yarn global add',
-        pnpm: 'pnpm add -g',
-        bun: 'bun add -g',
-      }
-      const updateMessage = `${global[packageManager]} brisket-create-app`
+        npm: "npm i -g",
+        yarn: "yarn global add",
+        pnpm: "pnpm add -g",
+        bun: "bun add -g",
+      };
+      const updateMessage = `${global[packageManager]} brisket-create-app`;
       console.log(
-        yellow(bold('A new version of `brisket-create-app` is available!')) +
-          '\n' +
-          'You can update by running: ' +
+        yellow(bold("A new version of `brisket-create-app` is available!")) +
+          "\n" +
+          "You can update by running: " +
           cyan(updateMessage) +
-          '\n'
-      )
+          "\n"
+      );
     }
-    process.exit(0)
+    process.exit(0);
   } catch (err) {
     //
   }
 }
 
 async function exit(reason: { command?: string }) {
-  console.log()
-  console.log('Aborting installation.')
+  console.log();
+  console.log("Aborting installation.");
   if (reason.command) {
-    console.log(`  ${cyan(reason.command)} has failed.`)
+    console.log(`  ${cyan(reason.command)} has failed.`);
   } else {
     console.log(
-      red('Unexpected error. Please report it as a bug:') + '\n',
+      red("Unexpected error. Please report it as a bug:") + "\n",
       reason
-    )
+    );
   }
-  console.log()
-  await notifyUpdate()
-  process.exit(1)
+  console.log();
+  await notifyUpdate();
+  process.exit(1);
 }
 
 run().then(notifyUpdate).catch(exit);
