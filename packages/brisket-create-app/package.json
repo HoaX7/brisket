@@ -1,6 +1,6 @@
 {
   "name": "brisket-create-app",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Create backend boilerplates with one command",
   "main": "dist/index.js",
   "scripts": {
@@ -27,7 +27,7 @@
     "directory": "packages/brisket-create-app"
   },
   "bin": {
-    "brisket-create-app": "./dist/index.js"
+    "brisket-create-app": "dist/index.js"
   },
   "publishConfig": {
     "access": "public"
