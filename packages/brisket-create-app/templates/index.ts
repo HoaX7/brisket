@@ -64,6 +64,15 @@ export async function installTemplate({
         case "README-template.md": {
           return "README.md";
         }
+        case "env.example": {
+            return ".env";
+        }
+        case "gitignore": {
+            return ".gitignore"
+        }
+        case "dockerignore": {
+            return ".dockerignore"
+        }
         default:
           return name;
       }

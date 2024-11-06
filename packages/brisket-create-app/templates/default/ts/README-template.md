@@ -1,4 +1,4 @@
-This is a [Fastify](https://fastify.dev/) backend project bootstraped with `[brisket-create-app](https://github.com/HoaX7/brisket/packages/brisket-create-app)`.
+This is a [Fastify](https://fastify.dev/) backend project bootstraped with `[brisket-create-app](https://github.com/HoaX7/brisket/tree/main/packages/brisket-create-app)`.
 
 # Get Started
 
