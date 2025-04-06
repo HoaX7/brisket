@@ -11,8 +11,7 @@ const prepareLogObject = (array: T[]) => {
 	array.map((item) => {
 		if (item instanceof ApiError) {
 			errors.push(item);
-		}
-		if (item instanceof Error) {
+		} else if (item instanceof Error) {
 			errors.push({
 				message: item.message,
 				stack: item.stack || "No stack trace available",
@@ -45,7 +44,7 @@ class Logger {
 	private logData(level: "info" | "warn" | "debug" | "error", ...args) {
 		const { message, objects = {} } = prepareLogObject(args);
 		Object.assign(objects, { labels: getLoggerContext() });
-		winstonlogger.log(level, `${this.name ?? `[${this.name}] `}${message}`, objects);
+		winstonlogger.log(level, `${this.name ? `[${this.name.toUpperCase()}] ` : ""}${message}`, objects);
 	}
 
 	info(...args) {

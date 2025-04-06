@@ -30,7 +30,7 @@ brisket-create-app
 √ Do you want to initialize a git repository? » No / Yes
 ```
 
-# Support Frameworks
+# Supported Frameworks
 - Fastify
 - Express (WIP)
 - NestJs (WIP)

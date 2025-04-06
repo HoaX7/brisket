@@ -45,14 +45,14 @@ const requester = async function <T, R>({
 		},
 	};
 
-	const requesterInstance = axios.create(config);
+	const instance = axios.create(config);
 	const request: AxiosRequestConfig = {
 		method: method || "GET",
 		withCredentials: true,
 		url,
 		...(method === "GET" ? { params: data } : { data })
 	};
-	return requesterInstance(request)
+	return instance(request)
 		.then((res) => isRawResponse === true ? res : res.data)
 		.catch((err) => {
 			if (isAxiosError(err)) {

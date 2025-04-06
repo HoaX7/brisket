@@ -1,6 +1,6 @@
 {
   "name": "brisket-create-app",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Create backend boilerplates with one command",
   "main": "dist/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "prerelease": "node ../../scripts/rm.mjs dist",
     "release": "ncc build ./index.ts -o ./dist/ --minify --no-cache --no-source-map-register",
     "build": "npm run release && npm run compress",
-    "prepublishOnly": "npm version patch",
+    "prepublishOnly": "node ../../scripts/copyFile.mjs ../../README.md ./README.md && npm version patch",
     "compress": "terser dist/index.js --compress --mangle --output dist/index.js"
   },
   "keywords": [

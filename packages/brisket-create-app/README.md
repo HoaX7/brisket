@@ -1,4 +1,4 @@
-# Brisket Create App
+# Brisket
 The easiest way to get started with backend starter kit by using `brisket-create-app`. This CLI tool enables you to quickly start building a new backend service, with everything set up for you. To get started use the following command:
 
 ### Interactive
@@ -30,7 +30,7 @@ brisket-create-app
 √ Do you want to initialize a git repository? » No / Yes
 ```
 
-# Support Frameworks (WIP)
+# Supported Frameworks
 - Fastify
 - Express (WIP)
 - NestJs (WIP)
